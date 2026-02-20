@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  /* Green color palette for environmental focus */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+  --color-primary-950: #052e16;
+
+  /* Forest green accent */
+  --color-forest-50: #f5f9f6;
+  --color-forest-100: #e6f2e9;
+  --color-forest-200: #cce5d3;
+  --color-forest-300: #a0cfb0;
+  --color-forest-400: #6bb185;
+  --color-forest-500: #459564;
+  --color-forest-600: #32784d;
+  --color-forest-700: #295f3e;
+  --color-forest-800: #234c34;
+  --color-forest-900: #1d3f2c;
+  --color-forest-950: #0f2318;
+
+  /* Earth tone accent */
+  --color-earth-50: #faf8f5;
+  --color-earth-100: #f5f0e8;
+  --color-earth-200: #e8ddc9;
+  --color-earth-300: #d9c5a0;
+  --color-earth-400: #c9a870;
+  --color-earth-500: #b38f4e;
+  --color-earth-600: #997642;
+  --color-earth-700: #7d5f38;
+  --color-earth-800: #684e33;
+  --color-earth-900: #58422d;
+  --color-earth-950: #322418;
+
+  /* Neutral grays */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  /* Font family */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-neutral-200;
+  }
+
+  html {
+    @apply antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  body {
+    @apply bg-white text-neutral-900;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+    font-family: var(--font-display);
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg;
+  }
+
+  p {
+    @apply text-base leading-relaxed text-neutral-700;
+  }
+
+  a {
+    @apply text-primary-600 hover:text-primary-700 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
