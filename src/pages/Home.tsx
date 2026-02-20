@@ -78,7 +78,7 @@ export default function Home() {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[22rem] h-[22rem] bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer"
               >
                 <img
-                  src={productPackagedImage}
+                  src={founderImage}
                   alt="Founder of Dziphathu Green Tech"
                   className="h-full w-full object-cover"
                 />
@@ -570,7 +570,7 @@ export default function Home() {
               'TotalEnergies',
               'PWK Waste Management',
               'Start Up Business Campus',
-            ].map((partner, index) => (
+            ].map((partner) => (
               <motion.div
                 key={partner}
                 variants={scaleIn}
