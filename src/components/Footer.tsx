@@ -8,14 +8,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="font-heading text-xl font-bold mb-3">Dziphathu GreenTech</div>
-            <p className="text-sm text-[#9E9C96] leading-relaxed max-w-xs">
+            <p className="text-sm text-on-dark-muted leading-relaxed max-w-xs">
               Turning waste into value. Building a cleaner Limpopo through sustainable products and community empowerment.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <div className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-4">Navigation</div>
+            <div className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">Navigation</div>
             <nav className="flex flex-col gap-2.5">
               {[
                 { to: '/about', label: 'About' },
@@ -28,7 +28,7 @@ export default function Footer() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-sm text-[#9E9C96] hover:text-[#F7F6F2] transition-colors"
+                  className="text-sm text-on-dark-muted hover:text-[#F7F6F2] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -38,16 +38,16 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <div className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-4">Contact</div>
+            <div className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">Contact</div>
             <div className="flex flex-col gap-3">
-              <a href="tel:+27711687921" className="text-sm text-[#9E9C96] hover:text-[#F7F6F2] transition-colors">
+              <a href="tel:+27711687921" className="text-sm text-on-dark-muted hover:text-[#F7F6F2] transition-colors">
                 +27 71 168 7921
               </a>
-              <a href="mailto:info@dziphathugreentech.co.za" className="text-sm text-[#9E9C96] hover:text-[#F7F6F2] transition-colors">
+              <a href="mailto:info@dziphathugreentech.co.za" className="text-sm text-on-dark-muted hover:text-[#F7F6F2] transition-colors">
                 info@dziphathugreentech.co.za
               </a>
-              <span className="text-sm text-[#9E9C96]">Dzanani, Limpopo, South Africa</span>
-              <span className="text-sm text-[#9E9C96]">Mon–Fri 8AM–4PM · Sat 8AM–1PM</span>
+              <span className="text-sm text-on-dark-muted">Dzanani, Limpopo, South Africa</span>
+              <span className="text-sm text-on-dark-muted">Mon–Fri 8AM–4PM · Sat 8AM–1PM</span>
             </div>
 
             {/* Social */}
@@ -63,7 +63,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="text-[#6B6A65] hover:text-[#F7F6F2] transition-colors"
+                  className="text-muted hover:text-[#F7F6F2] transition-colors"
                 >
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d={s.path} />
@@ -74,11 +74,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-[#1C1C1A] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-          <p className="text-xs text-[#6B6A65]">
+        <div className="mt-16 pt-8 border-t border-dark-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <p className="text-xs text-muted">
             © {new Date().getFullYear()} Dziphathu GreenTech. All rights reserved.
           </p>
-          <p className="text-xs text-[#6B6A65]">B-BBEE Level 1 Certified</p>
+          <p className="text-xs text-muted">B-BBEE Level 1 Certified</p>
         </div>
       </div>
     </footer>

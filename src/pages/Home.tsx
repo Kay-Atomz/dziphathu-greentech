@@ -27,7 +27,7 @@ function useCountUp(end: number, isActive: boolean, duration = 1600) {
 
 const reveal = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number]as [number, number, number, number] } },
 };
 
 // Individual stat with count-up
@@ -38,7 +38,7 @@ function Stat({ value, suffix, label, isActive }: { value: number; suffix: strin
       <span className="font-heading text-5xl md:text-6xl font-bold text-[#111110] leading-none tabular-nums">
         {count}{suffix}
       </span>
-      <span className="text-sm text-[#6B6A65] mt-2">{label}</span>
+      <span className="text-sm text-muted mt-2">{label}</span>
     </div>
   );
 }
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-8 pt-[72px]">
+        <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-8 pt-18">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -76,7 +76,7 @@ export default function Home() {
           >
             <motion.p
               variants={reveal}
-              className="text-xs font-semibold tracking-widest uppercase text-[#9E9C96] mb-6"
+              className="text-xs font-semibold tracking-widest uppercase text-on-dark-muted mb-6"
             >
               Dzanani, Limpopo · Est. 2019
             </motion.p>
@@ -85,11 +85,11 @@ export default function Home() {
               className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-[#F7F6F2] leading-[1.05] text-balance max-w-4xl"
             >
               Waste reimagined.<br />
-              <span className="italic font-normal text-[#9E9C96]">Limpopo renewed.</span>
+              <span className="italic font-normal text-on-dark-muted">Limpopo renewed.</span>
             </motion.h1>
             <motion.p
               variants={reveal}
-              className="mt-8 text-lg text-[#9E9C96] max-w-xl leading-relaxed"
+              className="mt-8 text-lg text-on-dark-muted max-w-xl leading-relaxed"
             >
               We convert plastic and biomass waste into high-value products —
               eco charcoal briquettes and recycled paving bricks — creating
@@ -105,7 +105,7 @@ export default function Home() {
               </Link>
               <Link
                 to="/contact"
-                className="text-sm font-medium text-[#9E9C96] hover:text-[#F7F6F2] transition-colors"
+                className="text-sm font-medium text-on-dark-muted hover:text-[#F7F6F2] transition-colors"
               >
                 Get in touch
               </Link>
@@ -120,9 +120,9 @@ export default function Home() {
       </section>
 
       {/* ── STATS ───────────────────────────────────────────────── */}
-      <section className="bg-[#EEECEA]">
+      <section className="bg-surface-2">
         <div ref={statsRef} className="mx-auto max-w-6xl px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-[#DEDAD3]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-rule">
             <div className="md:px-10 first:pl-0 last:pr-0">
               <Stat value={800} suffix="+" label="Tons of waste recycled" isActive={statsVisible} />
             </div>
@@ -137,7 +137,7 @@ export default function Home() {
                 <span className="font-heading text-5xl md:text-6xl font-bold text-[#111110] leading-none">
                   L1
                 </span>
-                <span className="text-sm text-[#6B6A65] mt-2">B-BBEE certified</span>
+                <span className="text-sm text-muted mt-2">B-BBEE certified</span>
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8 py-24">
           <motion.p
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}
-            className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-16"
+            className="text-xs font-semibold tracking-widest uppercase text-muted mb-16"
           >
             What we make
           </motion.p>
@@ -158,25 +158,25 @@ export default function Home() {
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
             variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-            className="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-24 pb-24 border-b border-[#DEDAD3]"
+            className="grid md:grid-cols-2 gap-12 md:gap-20 items-center mb-24 pb-24 border-b border-rule"
           >
             <motion.div variants={reveal}>
-              <p className="text-xs text-[#6B6A65] mb-4 tracking-wider">01</p>
+              <p className="text-xs text-muted mb-4 tracking-wider">01</p>
               <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#111110] mb-6 leading-tight">
                 Eco Charcoal<br />Briquettes
               </h2>
-              <p className="text-[#6B6A65] leading-relaxed mb-4">
+              <p className="text-muted leading-relaxed mb-4">
                 Smokeless, odorless fuel made from biomass waste. Cleaner than
                 traditional charcoal, with no trees cut — materials sourced from
                 naturally fallen leaves and twigs near Kruger National Park.
               </p>
-              <p className="text-[#6B6A65] leading-relaxed mb-8">
+              <p className="text-muted leading-relaxed mb-8">
                 Used by households, restaurants, schools, and commercial kitchens
                 across Limpopo.
               </p>
               <Link
                 to="/products#briquettes"
-                className="inline-flex items-center gap-2 text-sm font-medium text-[#2A5C45] hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:gap-3 transition-all"
               >
                 Learn more →
               </Link>
@@ -185,7 +185,7 @@ export default function Home() {
               <img
                 src={briquettesImage}
                 alt="Eco charcoal briquettes"
-                className="w-full h-80 md:h-[420px] object-cover"
+                className="w-full h-80 md:h-105 object-cover"
               />
             </motion.div>
           </motion.div>
@@ -200,26 +200,26 @@ export default function Home() {
               <img
                 src={bricksImage}
                 alt="Recycled plastic paving bricks"
-                className="w-full h-80 md:h-[420px] object-cover"
+                className="w-full h-80 md:h-105 object-cover"
               />
             </motion.div>
             <motion.div variants={reveal} className="order-1 md:order-2">
-              <p className="text-xs text-[#6B6A65] mb-4 tracking-wider">02</p>
+              <p className="text-xs text-muted mb-4 tracking-wider">02</p>
               <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#111110] mb-6 leading-tight">
                 Recycled Plastic<br />Paving Bricks
               </h2>
-              <p className="text-[#6B6A65] leading-relaxed mb-4">
+              <p className="text-muted leading-relaxed mb-4">
                 100% recycled plastic. High strength, weatherproof, 50+ year
                 lifespan. 20–40% less expensive than concrete alternatives —
                 and every square metre diverts kilograms of plastic from landfills
                 and waterways.
               </p>
-              <p className="text-[#6B6A65] leading-relaxed mb-8">
+              <p className="text-muted leading-relaxed mb-8">
                 Used in driveways, walkways, public spaces, and government projects.
               </p>
               <Link
                 to="/products#paving"
-                className="inline-flex items-center gap-2 text-sm font-medium text-[#2A5C45] hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:gap-3 transition-all"
               >
                 Learn more →
               </Link>
@@ -237,21 +237,21 @@ export default function Home() {
             className="grid md:grid-cols-2 gap-16 items-center"
           >
             <div>
-              <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-6">
+              <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-muted mb-6">
                 Our flagship project
               </motion.p>
               <motion.h2 variants={reveal} className="font-heading text-4xl md:text-5xl font-bold text-[#F7F6F2] mb-6 leading-tight">
                 Hasha Mulilo<br />Eco Briquettes
               </motion.h2>
-              <motion.blockquote variants={reveal} className="border-l-2 border-[#2A5C45] pl-5 mb-6">
-                <p className="text-[#9E9C96] text-lg leading-relaxed italic">
+              <motion.blockquote variants={reveal} className="border-l-2 border-accent pl-5 mb-6">
+                <p className="text-on-dark-muted text-lg leading-relaxed italic">
                   "Can clean cooking energy be produced using waste, without cutting trees?"
                 </p>
-                <footer className="mt-2 text-sm text-[#6B6A65]">
+                <footer className="mt-2 text-sm text-muted">
                   — Tshikuwi Village, Limpopo, 2017
                 </footer>
               </motion.blockquote>
-              <motion.p variants={reveal} className="text-[#9E9C96] leading-relaxed mb-8">
+              <motion.p variants={reveal} className="text-on-dark-muted leading-relaxed mb-8">
                 That question became a company. From a grandmother's backyard with hand-built tools
                 to a structured enterprise near Kruger National Park — supported by UNDP, SANParks,
                 TotalEnergies, and 11 partner organisations.
@@ -271,7 +271,7 @@ export default function Home() {
               <img
                 src={hashaImage}
                 alt="Hasha Mulilo eco briquettes"
-                className="w-full h-[400px] md:h-[480px] object-cover"
+                className="w-full h-100 md:h-120 object-cover"
               />
             </motion.div>
           </motion.div>
@@ -285,7 +285,7 @@ export default function Home() {
             initial="hidden" whileInView="visible" viewport={{ once: true }}
             variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
           >
-            <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-4">
+            <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">
               Our stakeholders
             </motion.p>
             <motion.p variants={reveal} className="text-[#111110] text-lg mb-10">
@@ -293,8 +293,8 @@ export default function Home() {
             </motion.p>
             <motion.div variants={reveal} className="flex flex-wrap gap-x-8 gap-y-3">
               {partners.map((name, i) => (
-                <span key={name} className="text-sm text-[#6B6A65]">
-                  {name}{i < partners.length - 1 && <span className="ml-8 text-[#DEDAD3]">·</span>}
+                <span key={name} className="text-sm text-muted">
+                  {name}{i < partners.length - 1 && <span className="ml-8 text-rule">·</span>}
                 </span>
               ))}
             </motion.div>
@@ -303,7 +303,7 @@ export default function Home() {
       </section>
 
       {/* ── TEAM CONTEXT ────────────────────────────────────────── */}
-      <section className="bg-[#EEECEA]">
+      <section className="bg-surface-2">
         <div className="mx-auto max-w-6xl px-6 lg:px-8 py-0">
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }}
@@ -318,17 +318,17 @@ export default function Home() {
               />
             </motion.div>
             <motion.div variants={reveal} className="flex flex-col justify-center px-8 md:px-14 py-16">
-              <p className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-4">The team</p>
+              <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">The team</p>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#111110] mb-4 leading-tight">
                 Local people.<br />Real impact.
               </h2>
-              <p className="text-[#6B6A65] leading-relaxed mb-6">
+              <p className="text-muted leading-relaxed mb-6">
                 Honesty, transparency, and reliability — our core values shape every product we make
                 and every community we serve. B-BBEE Level 1 certified.
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 text-sm font-medium text-[#2A5C45] hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:gap-3 transition-all"
               >
                 About us →
               </Link>
@@ -338,7 +338,7 @@ export default function Home() {
       </section>
 
       {/* ── FINAL CTA ───────────────────────────────────────────── */}
-      <section className="bg-[#F7F6F2] border-t border-[#DEDAD3]">
+      <section className="bg-[#F7F6F2] border-t border-rule">
         <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}
           className="mx-auto max-w-6xl px-6 lg:px-8 py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
@@ -347,19 +347,19 @@ export default function Home() {
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#111110] mb-2">
               Ready to work with us?
             </h2>
-            <p className="text-[#6B6A65]">Partner with us, buy our products, or support our mission.</p>
+            <p className="text-muted">Partner with us, buy our products, or support our mission.</p>
           </div>
           <div className="flex flex-wrap gap-8 items-center shrink-0">
             <Link
               to="/contact"
-              className="text-sm font-medium text-[#2A5C45] hover:text-[#1E4433] transition-colors inline-flex items-center gap-2 group"
+              className="text-sm font-medium text-accent hover:text-accent-dark transition-colors inline-flex items-center gap-2 group"
             >
               Get in touch
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
             <Link
               to="/donations"
-              className="text-sm font-medium text-[#6B6A65] hover:text-[#111110] transition-colors"
+              className="text-sm font-medium text-muted hover:text-[#111110] transition-colors"
             >
               Support our work
             </Link>
