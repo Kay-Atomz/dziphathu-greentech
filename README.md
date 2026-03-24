@@ -1,75 +1,57 @@
-# React + TypeScript + Vite
+# Dziphathu GreenTech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website for Dziphathu GreenTech — built with React, TypeScript, and Tailwind CSS. Deployed to Firebase Hosting via GitHub Actions.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** with TypeScript
+- **Vite** (rolldown-vite) for bundling
+- **Tailwind CSS v4** for styling
+- **Framer Motion** for animations
+- **React Router v7** for routing
+- **Firebase Hosting** for deployment
 
-## React Compiler
+## Getting Started
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+**Prerequisites:** Node.js 20+
 
-Note: This will impact Vite dev & build performances.
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Start dev server
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Build for production
+npm run build
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The site deploys automatically to Firebase Hosting when changes are merged into `main`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Live URL: `https://dziphathu-greentech.web.app`
+
+To deploy manually:
+```bash
+npm run build
+firebase deploy
 ```
+
+## Project Structure
+
+```
+src/
+  assets/        # Images and static assets
+  components/    # Reusable UI components
+  pages/         # Page-level components
+  App.tsx        # Root component and routes
+  main.tsx       # Entry point
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for branching strategy, naming conventions, and workflow.

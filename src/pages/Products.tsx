@@ -1,340 +1,241 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import briquettesImage from '../assets/images/Product burning.jpeg';
+import briquettesDarkImage from '../assets/images/Product burning (Dark).jpeg';
+import bricksImage from '../assets/images/Product bricks.jpeg';
+import productMultipleImage from '../assets/images/Product (multiple).jpeg';
+import packagedImage from '../assets/images/Product packaged.jpeg';
+
+const reveal = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+};
 
 export default function Products() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-forest-900 via-primary-900 to-forest-800 py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Sustainable Products from Waste
-            </h1>
-            <p className="text-xl text-forest-100 leading-relaxed">
-              We transform environmental challenges into opportunities by converting waste
-              materials into valuable products that benefit communities and protect our planet.
-            </p>
-          </div>
+      {/* Hero */}
+      <section className="bg-[#111110] pt-[72px]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-24">
+          <motion.div initial="hidden" animate="visible" variants={{ visible: { transition: { staggerChildren: 0.1 } } }}>
+            <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-6">
+              Products
+            </motion.p>
+            <motion.h1 variants={reveal} className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-[#F7F6F2] max-w-3xl leading-tight mb-8">
+              Waste turned into value.
+            </motion.h1>
+            <motion.p variants={reveal} className="text-lg text-[#9E9C96] max-w-xl leading-relaxed">
+              Two products. Both made from waste. Both building a cleaner, more economically
+              resilient South Africa.
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Eco Briquettes Section */}
-      <section id="briquettes" className="py-20 scroll-mt-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-forest-100 text-forest-700 text-sm font-medium mb-6">
-                Clean Energy Solution
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-                Eco Charcoal Briquettes
-              </h2>
-              <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
-                Our flagship product converts biomass waste into high-quality, smokeless charcoal
-                briquettes. An affordable and sustainable energy source for households, businesses,
-                and institutions across South Africa.
-              </p>
-              <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
-                By using agricultural and forestry waste, we create a renewable fuel alternative
-                that reduces deforestation, cuts carbon emissions, and provides clean cooking energy
-                without the harmful smoke and odors of traditional charcoal.
-              </p>
+      {/* Product 01 — Eco Briquettes */}
+      <section id="briquettes" className="bg-[#F7F6F2] scroll-mt-[72px]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-24">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+          >
+            <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-16">
+              01 — Clean Energy
+            </motion.p>
 
-              <div className="bg-forest-50 rounded-xl p-6 mb-8">
-                <h3 className="text-xl font-bold text-neutral-900 mb-4">Key Benefits</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Smokeless & Odorless:</strong> Clean burning
-                      with minimal emissions for healthier indoor cooking
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Cost-Effective:</strong> More affordable
-                      than traditional charcoal with longer burning time
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Renewable:</strong> Made from sustainable
-                      biomass sources, no trees cut down
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Reduces Waste:</strong> Diverts biomass
-                      from landfills and reduces air pollution
-                    </span>
-                  </li>
-                </ul>
-              </div>
+            <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+              <motion.div variants={reveal}>
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#111110] mb-6 leading-tight">
+                  Eco Charcoal Briquettes
+                </h2>
+                <p className="text-[#6B6A65] leading-relaxed mb-4">
+                  Our flagship product converts biomass waste into high-quality, smokeless charcoal
+                  briquettes. An affordable, sustainable energy source for households, businesses,
+                  and institutions.
+                </p>
+                <p className="text-[#6B6A65] leading-relaxed mb-10">
+                  We use naturally fallen materials from near Kruger National Park — zero trees cut.
+                  Every briquette is smokeless, odorless, and burns longer than traditional charcoal.
+                </p>
 
-              <Link
-                to="/hasha-mulilo"
-                className="inline-flex items-center gap-2 text-forest-700 font-medium hover:gap-3 transition-all"
-              >
-                Learn about our Hasha Mulilo project
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
+                <div className="space-y-5 mb-10">
+                  {[
+                    { label: 'Smokeless & odorless', desc: 'Clean burning with minimal emissions — safer for indoor cooking.' },
+                    { label: 'Cost-effective', desc: 'More affordable than traditional charcoal with longer burn time.' },
+                    { label: 'Zero deforestation', desc: 'Sourced from naturally fallen biomass only.' },
+                    { label: 'Waste conversion', desc: 'Diverts biomass from landfills and reduces air pollution.' },
+                  ].map((item) => (
+                    <div key={item.label} className="border-t border-[#DEDAD3] pt-5">
+                      <div className="flex items-start justify-between gap-4">
+                        <span className="font-medium text-[#111110] text-sm">{item.label}</span>
+                        <span className="text-sm text-[#6B6A65] text-right max-w-xs">{item.desc}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-forest-600 to-forest-800 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Perfect For</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                      </svg>
-                    </div>
-                    <span>Households & Residential Cooking</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-                    <span>Restaurants & Food Businesses</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                    </div>
-                    <span>Schools & Educational Institutions</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <span>Commercial & Industrial Users</span>
-                  </li>
-                </ul>
-              </div>
+                <div className="border-t border-[#DEDAD3] pt-8">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-4">Used by</p>
+                  <p className="text-[#6B6A65] text-sm">
+                    Households · Restaurants & food businesses · Schools · Commercial kitchens
+                  </p>
+                </div>
 
-              <div className="bg-earth-50 rounded-2xl p-8 border border-earth-200">
-                <h3 className="text-xl font-bold text-neutral-900 mb-4">Environmental Impact</h3>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-neutral-700">Carbon Reduction</span>
-                      <span className="text-sm font-bold text-forest-700">90%</span>
-                    </div>
-                    <div className="h-2 bg-neutral-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-forest-600 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
+                <div className="mt-8">
+                  <Link
+                    to="/hasha-mulilo"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[#2A5C45] hover:gap-3 transition-all"
+                  >
+                    Read the Hasha Mulilo story →
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div variants={reveal} className="space-y-4">
+                <div className="overflow-hidden rounded-sm">
+                  <img src={briquettesImage} alt="Eco charcoal briquettes burning" className="w-full h-72 object-cover" />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="overflow-hidden rounded-sm">
+                    <img src={briquettesDarkImage} alt="Briquettes burning dark" className="w-full h-40 object-cover" />
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-neutral-700">Waste Diverted</span>
-                      <span className="text-sm font-bold text-forest-700">95%</span>
-                    </div>
-                    <div className="h-2 bg-neutral-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-forest-600 rounded-full" style={{ width: '95%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-neutral-700">Burning Efficiency</span>
-                      <span className="text-sm font-bold text-forest-700">85%</span>
-                    </div>
-                    <div className="h-2 bg-neutral-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-forest-600 rounded-full" style={{ width: '85%' }}></div>
-                    </div>
+                  <div className="overflow-hidden rounded-sm">
+                    <img src={packagedImage} alt="Packaged briquettes" className="w-full h-40 object-cover" />
                   </div>
                 </div>
-              </div>
+
+                {/* Metrics */}
+                <div className="bg-[#EEECEA] p-6 mt-2">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-5">Performance</p>
+                  <div className="space-y-4">
+                    {[
+                      { label: 'Carbon reduction vs wood fuel', value: '90%' },
+                      { label: 'Biomass waste diverted', value: '95%' },
+                      { label: 'Burning efficiency', value: '85%' },
+                    ].map((m) => (
+                      <div key={m.label} className="flex items-center justify-between">
+                        <span className="text-sm text-[#6B6A65]">{m.label}</span>
+                        <span className="text-sm font-semibold text-[#2A5C45]">{m.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="border-t border-neutral-200"></div>
+      <div className="border-t border-[#DEDAD3] mx-auto max-w-6xl" />
 
-      {/* Plastic Paving Bricks Section */}
-      <section id="paving" className="py-20 bg-neutral-50 scroll-mt-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 space-y-6">
-              <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Applications</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                      </svg>
-                    </div>
-                    <span>Driveways & Parking Areas</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-                    <span>Walkways & Pathways</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                    </div>
-                    <span>Public Spaces & Parks</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20">
-                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                      </svg>
-                    </div>
-                    <span>Government & Municipal Projects</span>
-                  </li>
-                </ul>
-              </div>
+      {/* Product 02 — Paving Bricks */}
+      <section id="paving" className="bg-[#F7F6F2] scroll-mt-[72px]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-24">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+          >
+            <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-16">
+              02 — Sustainable Construction
+            </motion.p>
 
-              <div className="bg-white rounded-2xl p-8 border border-neutral-200">
-                <h3 className="text-xl font-bold text-neutral-900 mb-4">Material Properties</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between py-2 border-b border-neutral-100">
-                    <span className="text-sm text-neutral-700">Durability</span>
-                    <span className="text-sm font-semibold text-neutral-900">High Strength</span>
-                  </div>
-                  <div className="flex items-center justify-between py-2 border-b border-neutral-100">
-                    <span className="text-sm text-neutral-700">Water Resistance</span>
-                    <span className="text-sm font-semibold text-neutral-900">Excellent</span>
-                  </div>
-                  <div className="flex items-center justify-between py-2 border-b border-neutral-100">
-                    <span className="text-sm text-neutral-700">Lifespan</span>
-                    <span className="text-sm font-semibold text-neutral-900">50+ Years</span>
-                  </div>
-                  <div className="flex items-center justify-between py-2">
-                    <span className="text-sm text-neutral-700">Recycled Content</span>
-                    <span className="text-sm font-semibold text-neutral-900">100%</span>
+            <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+              <motion.div variants={reveal} className="space-y-4 order-2 md:order-1">
+                <div className="overflow-hidden rounded-sm">
+                  <img src={bricksImage} alt="Recycled plastic paving bricks" className="w-full h-72 object-cover" />
+                </div>
+                <div className="overflow-hidden rounded-sm">
+                  <img src={productMultipleImage} alt="Products" className="w-full h-48 object-cover" />
+                </div>
+
+                {/* Spec table */}
+                <div className="bg-[#EEECEA] p-6">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-5">Specifications</p>
+                  <div className="space-y-3">
+                    {[
+                      { label: 'Durability', value: 'High strength' },
+                      { label: 'Water resistance', value: 'Excellent' },
+                      { label: 'Lifespan', value: '50+ years' },
+                      { label: 'Recycled content', value: '100%' },
+                      { label: 'Cost vs concrete', value: '20–40% less' },
+                    ].map((s) => (
+                      <div key={s.label} className="flex items-center justify-between border-t border-[#DEDAD3] pt-3">
+                        <span className="text-sm text-[#6B6A65]">{s.label}</span>
+                        <span className="text-sm font-semibold text-[#111110]">{s.value}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
 
-            <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-                Sustainable Construction
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-                Recycled Plastic Paving Bricks
-              </h2>
-              <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
-                Our innovative paving bricks are manufactured entirely from recycled plastic waste,
-                offering a durable and cost-effective alternative to traditional concrete or asphalt
-                paving solutions.
-              </p>
-              <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
-                By repurposing plastic that would otherwise pollute our oceans and landfills, we
-                create high-quality building materials that are stronger, longer-lasting, and more
-                sustainable than conventional options.
-              </p>
+              <motion.div variants={reveal} className="order-1 md:order-2">
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#111110] mb-6 leading-tight">
+                  Recycled Plastic Paving Bricks
+                </h2>
+                <p className="text-[#6B6A65] leading-relaxed mb-4">
+                  Manufactured entirely from recycled plastic waste — a durable, cost-effective alternative
+                  to traditional concrete or asphalt paving. Stronger, longer-lasting, and sustainable.
+                </p>
+                <p className="text-[#6B6A65] leading-relaxed mb-10">
+                  Every square metre diverts kilograms of plastic from the environment. Lightweight and
+                  simple to install without specialist equipment.
+                </p>
 
-              <div className="bg-primary-50 rounded-xl p-6 mb-8">
-                <h3 className="text-xl font-bold text-neutral-900 mb-4">Key Advantages</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-primary-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Superior Durability:</strong> Resistant to
-                      weathering, cracking, and UV damage
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-primary-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Cost-Effective:</strong> 20-40% less
-                      expensive than traditional paving materials
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-primary-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Easy Installation:</strong> Lightweight
-                      and simple to lay without specialized equipment
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-primary-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-neutral-700">
-                      <strong className="text-neutral-900">Environmental Impact:</strong> Each square
-                      meter diverts kilograms of plastic from the environment
-                    </span>
-                  </li>
-                </ul>
-              </div>
+                <div className="space-y-5 mb-10">
+                  {[
+                    { label: 'Superior durability', desc: 'Resistant to weathering, cracking, and UV damage.' },
+                    { label: 'Easy installation', desc: 'Lightweight — no heavy machinery required.' },
+                    { label: 'Environmental offset', desc: 'Each project diverts significant plastic from landfills.' },
+                    { label: 'Cost savings', desc: '20–40% cheaper than traditional paving materials.' },
+                  ].map((item) => (
+                    <div key={item.label} className="border-t border-[#DEDAD3] pt-5">
+                      <div className="flex items-start justify-between gap-4">
+                        <span className="font-medium text-[#111110] text-sm">{item.label}</span>
+                        <span className="text-sm text-[#6B6A65] text-right max-w-xs">{item.desc}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-              <div className="flex flex-wrap gap-4">
+                <div className="border-t border-[#DEDAD3] pt-8 mb-8">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-4">Applications</p>
+                  <p className="text-[#6B6A65] text-sm">
+                    Driveways · Walkways · Public spaces & parks · Government & municipal projects
+                  </p>
+                </div>
+
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-600 text-white font-medium hover:bg-primary-700 transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#2A5C45] hover:gap-3 transition-all"
                 >
-                  Request a Quote
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  Request a quote →
                 </Link>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-forest-600 to-primary-700 rounded-3xl px-8 py-16 md:px-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Go Green?
+      {/* CTA */}
+      <section className="bg-[#111110]">
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}
+          className="mx-auto max-w-6xl px-6 lg:px-8 py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+        >
+          <div>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#F7F6F2] mb-2">
+              Ready to order?
             </h2>
-            <p className="text-xl text-forest-100 mb-8 max-w-3xl mx-auto">
-              Get a free quote for our eco-friendly products and join the sustainable revolution.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-white text-forest-700 font-medium hover:bg-forest-50 transition-colors"
-            >
-              Get a Free Quote
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <p className="text-[#9E9C96]">Get pricing and availability for our products.</p>
           </div>
-        </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#F7F6F2] hover:text-white transition-colors group shrink-0"
+          >
+            Contact us
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
+        </motion.div>
       </section>
     </>
   );
