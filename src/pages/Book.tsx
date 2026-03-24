@@ -1,167 +1,151 @@
-import bookHashaMulilo from '../assets/Books/Book Hasha Mulilo.png';
+import { motion } from 'framer-motion';
+import bookImage from '../assets/Books/Book Hasha Mulilo.png';
 
 declare const ml: (action: string, id: string, force?: boolean) => void;
+
+const reveal = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number]} },
+};
+
+const chapters = [
+  { title: 'From Idea to Enterprise', body: 'How a simple village observation evolved into a company delivering sustainable energy solutions.' },
+  { title: 'Technical Mastery', body: 'Lessons from testing moisture, pressure, material composition, and combustion performance.' },
+  { title: 'Strategic Partnerships', body: 'How collaborations with UNDP, SANParks, and others supported scale and credibility.' },
+  { title: 'Business Sustainability', body: 'Balancing profitability, mission alignment, and long-term operational resilience.' },
+  { title: 'Environmental Outcomes', body: 'Real progress in reducing deforestation pressure and building cleaner fuel options.' },
+  { title: 'Honest Lessons', body: 'Straight reflections on failures, pivots, and decisions that changed the trajectory.' },
+];
 
 export default function Book() {
   const openSubscribeForm = () => ml('show', 'rBpFwN', true);
 
   return (
     <>
-      <section className="bg-gradient-to-br from-forest-900 via-primary-900 to-forest-800 py-16 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:items-center lg:px-8">
-          <div className="lg:col-span-7">
-            <div className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-semibold text-forest-100">
-              Featured Publication
-            </div>
-            <h1 className="mt-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-              Hasha Mulilo:
-              <span className="block text-primary-200">Our Story of Sustainable Innovation</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-forest-100">
-              Discover how local observation, hands-on experimentation, and disciplined execution
-              built a clean energy enterprise creating real environmental and economic impact.
-            </p>
-
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur">
-                <div className="text-sm font-semibold text-white">Real Journey</div>
-                <div className="mt-1 text-sm text-forest-100">From village insight to registered enterprise.</div>
-              </div>
-              <div className="rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur">
-                <div className="text-sm font-semibold text-white">Technical Lessons</div>
-                <div className="mt-1 text-sm text-forest-100">Practical learning from materials to process control.</div>
-              </div>
-              <div className="rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur">
-                <div className="text-sm font-semibold text-white">Proven Impact</div>
-                <div className="mt-1 text-sm text-forest-100">Cleaner energy alternatives and stronger communities.</div>
-              </div>
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <button
-                onClick={openSubscribeForm}
-                className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-700"
-              >
-                Get Free Digital Copy
-              </button>
-              <a
-                href="#book-highlights"
-                className="inline-flex items-center justify-center rounded-lg border border-white/30 bg-transparent px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
-              >
-                Explore Book Highlights
-              </a>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5">
-            <div className="rounded-3xl p-5 shadow-2xl sm:p-6">
-              <img
-                src={bookHashaMulilo}
-                alt="Hasha Mulilo book cover"
-                className="mx-auto w-full max-w-md rounded-1xl object-contain shadow-2xl"
-              />
-              <div className="mt-4 rounded-xl bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
-                A practical, first-hand account of building a sustainable energy business in Southern Africa.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="book-highlights" className="bg-gradient-to-b from-forest-50 to-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl font-bold text-neutral-900 md:text-5xl">What You Will Learn</h2>
-            <p className="mx-auto mt-4 max-w-3xl text-xl text-neutral-600">
-              A practical roadmap for entrepreneurs, innovators, and sustainability leaders.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-neutral-900">From Idea to Enterprise</h3>
-              <p className="mt-3 text-neutral-700">
-                How a simple village observation evolved into a company delivering sustainable energy solutions.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-neutral-900">Technical Mastery</h3>
-              <p className="mt-3 text-neutral-700">
-                Lessons from testing moisture, pressure, material composition, and combustion performance.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-neutral-900">Strategic Partnerships</h3>
-              <p className="mt-3 text-neutral-700">
-                How collaborations with UNDP, SANParks, and others supported scale and credibility.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-neutral-900">Business Sustainability</h3>
-              <p className="mt-3 text-neutral-700">
-                Balancing profitability, mission alignment, and long-term operational resilience.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-neutral-900">Environmental Outcomes</h3>
-              <p className="mt-3 text-neutral-700">
-                Real progress in reducing deforestation pressure and building cleaner fuel options.
-              </p>
-            </article>
-            <article className="rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm">
-              <h3 className="text-xl font-bold text-neutral-900">Honest Lessons</h3>
-              <p className="mt-3 text-neutral-700">
-                Straight reflections on failures, pivots, and decisions that changed the trajectory.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-neutral-50 py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border border-neutral-200 bg-white p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-neutral-900 md:text-4xl">About the Story</h2>
-            <p className="mt-6 text-lg leading-relaxed text-neutral-700">
-              This book chronicles the real journey of Dziphathu Green Tech and the Hasha Mulilo
-              Eco Briquettes project, from a question asked in Tshikuwi Village to a structured clean
-              energy enterprise operating near Kruger National Park.
-            </p>
-            <p className="mt-5 text-lg leading-relaxed text-neutral-700">
-              It is not a theoretical guide. It is the account of what happened in practice: manual
-              production from 2019 to 2022, lessons from failed batches, early funding support from
-              UNDP, strategic pivots, and the partnerships that enabled growth.
-            </p>
-            <p className="mt-5 text-lg leading-relaxed text-neutral-700">
-              Written for entrepreneurs and environmental changemakers, this publication provides
-              grounded insights shaped by lived experience, technical experimentation, and disciplined
-              execution.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="book-subscribe" className="bg-gradient-to-br from-primary-600 to-forest-700 py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10 text-center text-white">
-            <h2 className="text-4xl font-bold md:text-5xl">Get Your Free Digital Copy</h2>
-            <p className="mt-4 text-xl text-primary-100">
-              Subscribe to receive book access and updates from Dziphathu Green Tech.
-            </p>
-          </div>
-
-          <div className="text-center">
-            <button
-              onClick={openSubscribeForm}
-              className="inline-flex items-center justify-center rounded-lg bg-white px-10 py-4 text-lg font-semibold text-primary-700 shadow-lg transition-all hover:bg-primary-50"
+      {/* Hero */}
+      <section className="bg-[#111110] pt-[72px]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-24">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial="hidden" animate="visible"
+              variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
             >
-              Subscribe & Get the Book
-            </button>
-            <p className="mt-4 text-sm text-primary-100">
-              We respect your privacy. Your information will never be shared.
-            </p>
+              <motion.p variants={reveal} className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-6">
+                Featured publication
+              </motion.p>
+              <motion.h1 variants={reveal} className="font-heading text-5xl md:text-6xl font-bold text-[#F7F6F2] leading-tight mb-6">
+                Hasha Mulilo:<br />
+                <span className="italic font-normal text-[#9E9C96]">Our Story of Sustainable Innovation</span>
+              </motion.h1>
+              <motion.p variants={reveal} className="text-[#9E9C96] leading-relaxed mb-10 max-w-md">
+                A first-hand account of building a clean energy enterprise in Southern Africa —
+                from backyard experimentation to a structured business near Kruger National Park.
+              </motion.p>
+              <motion.div variants={reveal} className="flex flex-wrap gap-8 items-center">
+                <button
+                  onClick={openSubscribeForm}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#F7F6F2] bg-[#2A5C45] px-6 py-3 hover:bg-[#1E4433] transition-colors group"
+                >
+                  Get free digital copy
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </button>
+                <a href="#highlights" className="text-sm text-[#9E9C96] hover:text-[#F7F6F2] transition-colors">
+                  See highlights ↓
+                </a>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+            >
+              <img
+                src={bookImage}
+                alt="Hasha Mulilo book cover"
+                className="w-full max-w-sm mx-auto object-contain"
+              />
+            </motion.div>
           </div>
         </div>
+      </section>
+
+      {/* About the book */}
+      <section className="bg-[#F7F6F2]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-20">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+            className="grid md:grid-cols-2 gap-16"
+          >
+            <motion.div variants={reveal}>
+              <p className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-6">About the story</p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#111110] mb-6 leading-tight">
+                Not a guide.<br />An account.
+              </h2>
+            </motion.div>
+            <motion.div variants={reveal} className="space-y-5">
+              <p className="text-[#6B6A65] leading-relaxed">
+                This book chronicles the real journey of Dziphathu GreenTech — from a question asked
+                in Tshikuwi Village to a structured clean energy enterprise operating near Kruger National Park.
+              </p>
+              <p className="text-[#6B6A65] leading-relaxed">
+                It is the account of what happened in practice: manual production from 2019 to 2022,
+                lessons from failed batches, early funding from UNDP, strategic pivots, and the partnerships
+                that enabled growth.
+              </p>
+              <p className="text-[#6B6A65] leading-relaxed">
+                Written for entrepreneurs and environmental changemakers — grounded insights shaped by
+                lived experience, technical experimentation, and disciplined execution.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Chapter highlights */}
+      <section id="highlights" className="bg-[#EEECEA] scroll-mt-[72px]">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 py-20">
+          <motion.p
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}
+            className="text-xs font-semibold tracking-widest uppercase text-[#6B6A65] mb-12"
+          >
+            What you will learn
+          </motion.p>
+          <div className="grid md:grid-cols-2 gap-0">
+            {chapters.map((ch, i) => (
+              <motion.div
+                key={ch.title}
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}
+                className={`border-t border-[#DEDAD3] py-8 ${i % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:border-l'}`}
+              >
+                <h3 className="font-medium text-[#111110] mb-2">{ch.title}</h3>
+                <p className="text-sm text-[#6B6A65] leading-relaxed">{ch.body}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Subscribe CTA */}
+      <section className="bg-[#111110]">
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal}
+          className="mx-auto max-w-6xl px-6 lg:px-8 py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-8"
+        >
+          <div>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#F7F6F2] mb-2">
+              Get your free digital copy.
+            </h2>
+            <p className="text-[#9E9C96] text-sm">Subscribe to receive access. We respect your privacy.</p>
+          </div>
+          <button
+            onClick={openSubscribeForm}
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#111110] bg-[#F7F6F2] px-6 py-3 hover:bg-[#EEECEA] transition-colors group shrink-0"
+          >
+            Subscribe & get the book
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </motion.div>
       </section>
     </>
   );
