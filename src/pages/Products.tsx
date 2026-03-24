@@ -4,13 +4,13 @@ export default function Products() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 via-white to-forest-50 py-20 md:py-28">
+      <section className="relative bg-gradient-to-br from-forest-900 via-primary-900 to-forest-800 py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Sustainable Products from Waste
             </h1>
-            <p className="text-xl text-neutral-700 leading-relaxed">
+            <p className="text-xl text-forest-100 leading-relaxed">
               We transform environmental challenges into opportunities by converting waste
               materials into valuable products that benefit communities and protect our planet.
             </p>

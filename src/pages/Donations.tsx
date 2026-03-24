@@ -2,7 +2,7 @@ export default function Donations() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-forest-900 via-primary-900 to-forest-800 py-20 md:py-32">
+      <section className="relative bg-gradient-to-br from-forest-900 via-primary-900 to-forest-800 py-20 md:py-36">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl text-white">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
@@ -20,7 +20,7 @@ export default function Donations() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div> */}
       </section>
 
       {/* Impact Areas */}
@@ -36,13 +36,48 @@ export default function Donations() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-primary-50 to-forest-50 rounded-2xl p-8 border-2 border-transparent hover:border-primary-300 transition-all">
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary-600 text-white mb-6">
+           
+            <div className="bg-gradient-to-br from-forest-50 to-primary-50 rounded-2xl p-8 lg:py-30 border-2 border-transparent hover:border-forest-300 transition-all">
+              {/* <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-forest-600 text-white mb-6">
+                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div> */}
+              <h3 className="text-2xl font-bold text-neutral-900 mb-3">
+                Community Empowerment
+              </h3>
+              <p className="text-neutral-700 leading-relaxed mb-4">
+                Supporting skills training, job creation, and cooperative development in rural
+                communities, building local capacity for sustainable development.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-sm text-neutral-700">
+                  <svg className="w-5 h-5 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Youth employment programs
+                </li>
+                <li className="flex items-start gap-2 text-sm text-neutral-700">
+                  <svg className="w-5 h-5 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Skills transfer workshops
+                </li>
+                <li className="flex items-start gap-2 text-sm text-neutral-700">
+                  <svg className="w-5 h-5 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Cooperative support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-primary-50 to-forest-50 rounded-2xl p-8 lg:py-30 border-2 border-transparent hover:border-primary-300 transition-all">
+              {/* <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-primary-600 text-white mb-6">
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                 </svg>
-              </div>
+              </div> */}
               <h3 className="text-2xl font-bold text-neutral-900 mb-3">
                 Clean Energy Production
               </h3>
@@ -72,47 +107,12 @@ export default function Donations() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-forest-50 to-primary-50 rounded-2xl p-8 border-2 border-transparent hover:border-forest-300 transition-all">
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-forest-600 text-white mb-6">
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-neutral-900 mb-3">
-                Community Empowerment
-              </h3>
-              <p className="text-neutral-700 leading-relaxed mb-4">
-                Supporting skills training, job creation, and cooperative development in rural
-                communities, building local capacity for sustainable development.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-sm text-neutral-700">
-                  <svg className="w-5 h-5 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Youth employment programs
-                </li>
-                <li className="flex items-start gap-2 text-sm text-neutral-700">
-                  <svg className="w-5 h-5 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Skills transfer workshops
-                </li>
-                <li className="flex items-start gap-2 text-sm text-neutral-700">
-                  <svg className="w-5 h-5 text-forest-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Cooperative support
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-primary-50 to-earth-50 rounded-2xl p-8 border-2 border-transparent hover:border-earth-300 transition-all">
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-earth-600 text-white mb-6">
+            <div className="bg-gradient-to-br from-primary-50 to-earth-50 rounded-2xl p-8 lg:py-30 border-2 border-transparent hover:border-earth-300 transition-all">
+              {/* <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-earth-600 text-white mb-6">
                 <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-              </div>
+              </div> */}
               <h3 className="text-2xl font-bold text-neutral-900 mb-3">
                 Environmental Protection
               </h3>
@@ -158,7 +158,7 @@ export default function Donations() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl p-6 border-2 border-primary-200">
+            <div className="bg-white rounded-xl p-6 border-2 border-forest-200">
               <div className="text-3xl font-bold text-primary-700 mb-2">R500</div>
               <div className="text-sm font-semibold text-neutral-900 mb-3">Materials for Production</div>
               <p className="text-sm text-neutral-700">
@@ -167,23 +167,23 @@ export default function Donations() {
             </div>
 
             <div className="bg-white rounded-xl p-6 border-2 border-forest-200">
-              <div className="text-3xl font-bold text-forest-700 mb-2">R2,000</div>
+              <div className="text-3xl font-bold text-primary-700 mb-2">R2,000</div>
               <div className="text-sm font-semibold text-neutral-900 mb-3">Skills Training</div>
               <p className="text-sm text-neutral-700">
                 Funds a week-long skills training workshop for 10 community members.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-earth-200">
-              <div className="text-3xl font-bold text-earth-700 mb-2">R5,000</div>
+            <div className="bg-white rounded-xl p-6 border-2 border-forest-200">
+              <div className="text-3xl font-bold text-primary-700 mb-2">R5,000</div>
               <div className="text-sm font-semibold text-neutral-900 mb-3">Equipment Upgrade</div>
               <p className="text-sm text-neutral-700">
                 Contributes to upgrading processing equipment, increasing production capacity by 20%.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-primary-300">
-              <div className="text-3xl font-bold text-primary-700 mb-2">R10,000+</div>
+            <div className="bg-white rounded-xl p-6 border-2 border-earth-200">
+              <div className="text-3xl font-bold text-earth-700 mb-2">R10,000+</div>
               <div className="text-sm font-semibold text-neutral-900 mb-3">Major Impact</div>
               <p className="text-sm text-neutral-700">
                 Enables expansion to new communities, creating jobs and environmental benefits.
@@ -252,11 +252,11 @@ export default function Donations() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 border border-neutral-200">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-100 text-primary-700 mb-6">
+              {/* <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-100 text-primary-700 mb-6">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
-              </div>
+              </div> */}
               <h3 className="text-xl font-bold text-neutral-900 mb-3">Buy Our Products</h3>
               <p className="text-neutral-700 mb-4">
                 Purchase our eco briquettes or plastic paving bricks. Every sale supports our
@@ -271,11 +271,11 @@ export default function Donations() {
             </div>
 
             <div className="bg-white rounded-xl p-8 border border-neutral-200">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-forest-100 text-forest-700 mb-6">
+              {/* <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-forest-100 text-forest-700 mb-6">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                 </svg>
-              </div>
+              </div> */}
               <h3 className="text-xl font-bold text-neutral-900 mb-3">Spread the Word</h3>
               <p className="text-neutral-700 mb-4">
                 Share our story on social media and help raise awareness about sustainable waste
@@ -290,11 +290,11 @@ export default function Donations() {
             </div>
 
             <div className="bg-white rounded-xl p-8 border border-neutral-200">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-earth-100 text-earth-700 mb-6">
+              {/* <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-earth-100 text-earth-700 mb-6">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-              </div>
+              </div> */}
               <h3 className="text-xl font-bold text-neutral-900 mb-3">Partner With Us</h3>
               <p className="text-neutral-700 mb-4">
                 Organizations can partner with us on projects, provide resources, or offer expertise

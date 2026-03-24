@@ -2,13 +2,13 @@ export default function About() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-forest-50 via-white to-primary-50 py-20 md:py-28">
+      <section className="relative bg-linear-to-br from-forest-900 via-primary-900 to-forest-800 py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-neutral-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Building a Sustainable Future
             </h1>
-            <p className="text-xl text-neutral-700 leading-relaxed">
+            <p className="text-xl text-forest-100 leading-relaxed">
               Since 2019, Dziphathu Green Tech has been at the forefront of waste management
               innovation in South Africa, transforming environmental challenges into opportunities
               for sustainable development.
@@ -22,12 +22,12 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-primary-50 rounded-2xl p-8 md:p-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-600 text-white mb-6">
+              {/* <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-600 text-white mb-6">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
-              </div>
+              </div> */}
               <h2 className="text-3xl font-bold text-neutral-900 mb-4">Our Vision</h2>
               <p className="text-lg text-neutral-700 leading-relaxed">
                 To become a dependable and recognized leader in the waste management industry,
@@ -36,11 +36,11 @@ export default function About() {
             </div>
 
             <div className="bg-forest-50 rounded-2xl p-8 md:p-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-forest-600 text-white mb-6">
+              {/* <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-forest-600 text-white mb-6">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-              </div>
+              </div> */}
               <h2 className="text-3xl font-bold text-neutral-900 mb-4">Our Mission</h2>
               <p className="text-lg text-neutral-700 leading-relaxed">
                 To provide sustainable, cost-effective waste management solutions that empower
@@ -64,7 +64,7 @@ export default function About() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 border border-neutral-200">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-100 text-primary-700 mb-6">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl  text-primary-700 mb-6">
                 <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -77,7 +77,7 @@ export default function About() {
             </div>
 
             <div className="bg-white rounded-xl p-8 border border-neutral-200">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-forest-100 text-forest-700 mb-6">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl  text-forest-700 mb-6">
                 <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -91,7 +91,7 @@ export default function About() {
             </div>
 
             <div className="bg-white rounded-xl p-8 border border-neutral-200">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-earth-100 text-earth-700 mb-6">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl  text-earth-700 mb-6">
                 <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
@@ -126,7 +126,7 @@ export default function About() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 text-primary-700 mt-1">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full  text-primary-700 mt-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -140,7 +140,7 @@ export default function About() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 text-primary-700 mt-1">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full  text-primary-700 mt-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -154,7 +154,7 @@ export default function About() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-primary-100 text-primary-700 mt-1">
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full  text-primary-700 mt-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -210,7 +210,7 @@ export default function About() {
 
           <div className="max-w-xl mx-auto">
             <div className="bg-white rounded-2xl p-8 border-2 border-primary-200 text-center">
-              <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-primary-100 text-primary-700 mb-6">
+              <div className="inline-flex h-20 w-20 items-center justify-center rounded-full  text-primary-700 mb-6">
                 <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>

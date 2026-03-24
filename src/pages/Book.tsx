@@ -1,16 +1,9 @@
-import { useState } from 'react';
 import bookHashaMulilo from '../assets/Books/Book Hasha Mulilo.png';
 
-export default function Book() {
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
+declare const ml: (action: string, id: string, force?: boolean) => void;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Subscription:', { name, email });
-    setIsSubmitted(true);
-  };
+export default function Book() {
+  const openSubscribeForm = () => ml('show', 'rBpFwN', true);
 
   return (
     <>
@@ -45,12 +38,12 @@ export default function Book() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#book-subscribe"
+              <button
+                onClick={openSubscribeForm}
                 className="inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-700"
               >
                 Get Free Digital Copy
-              </a>
+              </button>
               <a
                 href="#book-highlights"
                 className="inline-flex items-center justify-center rounded-lg border border-white/30 bg-transparent px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
@@ -65,7 +58,7 @@ export default function Book() {
               <img
                 src={bookHashaMulilo}
                 alt="Hasha Mulilo book cover"
-                className="mx-auto w-full max-w-md rounded-2xl object-contain shadow-2xl"
+                className="mx-auto w-full max-w-md rounded-1xl object-contain shadow-2xl"
               />
               <div className="mt-4 rounded-xl bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
                 A practical, first-hand account of building a sustainable energy business in Southern Africa.
@@ -157,76 +150,17 @@ export default function Book() {
             </p>
           </div>
 
-          {!isSubmitted ? (
-            <form onSubmit={handleSubmit} className="rounded-2xl bg-white p-8 shadow-xl md:p-12">
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="book-name" className="mb-2 block text-sm font-medium text-neutral-900">
-                    Your Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="book-name"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="w-full rounded-lg border border-neutral-300 px-4 py-3.5 text-lg outline-none transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-200"
-                    placeholder="John Doe"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="book-email" className="mb-2 block text-sm font-medium text-neutral-900">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="book-email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-lg border border-neutral-300 px-4 py-3.5 text-lg outline-none transition-colors focus:border-primary-500 focus:ring-2 focus:ring-primary-200"
-                    placeholder="john@example.com"
-                  />
-                </div>
-
-                <div className="rounded-lg border border-forest-200 bg-forest-50 p-4">
-                  <p className="text-sm text-neutral-700">
-                    By subscribing, you will also receive updates on our environmental initiatives,
-                    products, and sustainability insights. You can unsubscribe anytime.
-                  </p>
-                </div>
-
-                <button
-                  type="submit"
-                  className="inline-flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-primary-600 to-forest-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:from-primary-700 hover:to-forest-700"
-                >
-                  Subscribe & Get the Book
-                </button>
-
-                <p className="text-center text-sm text-neutral-600">
-                  We respect your privacy. Your information will never be shared.
-                </p>
-              </div>
-            </form>
-          ) : (
-            <div className="rounded-2xl bg-white p-8 text-center shadow-xl md:p-12">
-              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-primary-100 text-primary-700">
-                <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h3 className="mb-4 text-3xl font-bold text-neutral-900">You&apos;re All Set!</h3>
-              <p className="mb-6 text-lg text-neutral-700">
-                Thank you for subscribing. We will email your free digital copy and book updates.
-              </p>
-              <div className="rounded-lg border border-primary-200 bg-primary-50 p-6">
-                <p className="text-sm text-neutral-700">
-                  Check your inbox for confirmation and add us to your contacts so you do not miss any updates.
-                </p>
-              </div>
-            </div>
-          )}
+          <div className="text-center">
+            <button
+              onClick={openSubscribeForm}
+              className="inline-flex items-center justify-center rounded-lg bg-white px-10 py-4 text-lg font-semibold text-primary-700 shadow-lg transition-all hover:bg-primary-50"
+            >
+              Subscribe & Get the Book
+            </button>
+            <p className="mt-4 text-sm text-primary-100">
+              We respect your privacy. Your information will never be shared.
+            </p>
+          </div>
         </div>
       </section>
     </>

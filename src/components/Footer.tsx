@@ -5,63 +5,8 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <img
-                src={logo}
-                alt="Dziphathu Green Tech Logo"
-                className="h-10 w-auto object-contain"
-              />
-              <span className="text-base font-semibold text-neutral-900">
-                Dziphathu Green Tech
-              </span>
-            </div>
-            <p className="text-sm text-neutral-600 mb-4">
-              Creating a cleaner environment through innovative waste management solutions.
-            </p>
-            <div className="flex items-center gap-1 text-xs text-neutral-500">
-              <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-primary-100 text-primary-700 font-medium">
-                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                B-BBEE Level 1
-              </span>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-sm font-semibold text-neutral-900 mb-4">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/about" className="text-sm text-neutral-600 hover:text-primary-600 transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="text-sm text-neutral-600 hover:text-primary-600 transition-colors">
-                  Our Products
-                </Link>
-              </li>
-              <li>
-                <Link to="/hasha-mulilo" className="text-sm text-neutral-600 hover:text-primary-600 transition-colors">
-                  Hasha Mulilo Project
-                </Link>
-              </li>
-              <li>
-                <Link to="/book" className="text-sm text-neutral-600 hover:text-primary-600 transition-colors">
-                  Our Book
-                </Link>
-              </li>
-              <li>
-                <Link to="/donations" className="text-sm text-neutral-600 hover:text-primary-600 transition-colors">
-                  Donate
-                </Link>
-              </li>
-            </ul>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
+                 
 
           {/* Contact Info */}
           <div>
@@ -97,13 +42,13 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-sm font-semibold text-neutral-900 mb-4">Follow Us</h3>
-            <div className="flex flex-wrap gap-3">
+            <h3 className="text-sm font-semibold text-neutral-900 mb-4 flex lg:justify-end">Follow Us</h3>
+            <div className="flex flex-wrap gap-3  lg:justify-end"> 
               <a
                 href="https://facebook.com/dziphathugreentech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-200 text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-lg  text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -114,7 +59,7 @@ export default function Footer() {
                 href="https://youtube.com/dziphathugreentech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-200 text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-lg  text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
                 aria-label="YouTube"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -125,7 +70,7 @@ export default function Footer() {
                 href="https://instagram.com/dziphathugreentech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-200 text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-lg  text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -136,7 +81,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/dziphathugreentech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-lg bg-neutral-200 text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-lg  text-neutral-700 hover:bg-primary-600 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

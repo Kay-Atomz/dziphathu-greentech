@@ -8,6 +8,8 @@ import workingFieldImage from '../assets/images/Working in field.jpeg';
 import productBurningImage from '../assets/images/Product burning.jpeg';
 import productBricksImage from '../assets/images/Product bricks.jpeg';
 import productPackagedImage from '../assets/images/Product packaged.jpeg';
+import producBurningDark from '../assets/images/Product burning (Dark).jpeg';
+import productHashaMuliloImage from '../assets/images/Product Hasha mulilo.jpeg';
 
 export default function Home() {
   return (
@@ -78,8 +80,8 @@ export default function Home() {
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[22rem] h-[22rem] bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer"
               >
                 <img
-                  src={founderImage}
-                  alt="Founder of Dziphathu Green Tech"
+                  src={productPackagedImage}
+                  alt="Product packaged and ready for delivery"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-neutral-900/80 to-transparent p-6">
@@ -337,7 +339,7 @@ export default function Home() {
                   className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="flex items-start justify-between mb-6">
+              {/* <div className="flex items-start justify-between mb-6">
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
@@ -348,7 +350,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                   </svg>
                 </motion.div>
-              </div>
+              </div> */}
               <h3 className="text-2xl font-bold text-neutral-900 mb-3">
                 Eco Charcoal Briquettes
               </h3>
@@ -400,7 +402,7 @@ export default function Home() {
                   className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="flex items-start justify-between mb-6">
+              {/* <div className="flex items-start justify-between mb-6">
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
@@ -410,7 +412,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </motion.div>
-              </div>
+              </div> */}
               <h3 className="text-2xl font-bold text-neutral-900 mb-3">
                 Recycled Plastic Paving Bricks
               </h3>
@@ -498,8 +500,8 @@ export default function Home() {
                 className="col-span-2 overflow-hidden rounded-2xl border border-forest-700"
               >
                 <img
-                  src={founderSpeechImage}
-                  alt="Founder sharing the Hasha Mulilo vision"
+                  src={producBurningDark}
+                  alt="Hasha Mulilo briquettes burning with a clean flame"
                   className="h-56 w-full object-cover"
                 />
               </motion.div>
@@ -511,8 +513,8 @@ export default function Home() {
                 className="overflow-hidden rounded-xl border border-forest-700"
               >
                 <img
-                  src={workingFieldImage}
-                  alt="Field work for biomass collection"
+                  src={productHashaMuliloImage}
+                  alt="Product Hasha Mulilo eco briquettes"
                   className="h-40 w-full object-cover"
                 />
               </motion.div>
